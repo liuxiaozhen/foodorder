@@ -56,7 +56,9 @@ function redrawDotNav(){
 	// The top of each section is offset by half the distance to the previous section.
 	//var section2Top =  $('#about').offset().top - (($('#work').offset().top - $('#about').offset().top) / 2);
 	//var section3Top =  $('#work').offset().top - (($('#contact').offset().top - $('#work').offset().top) / 2);
-	var section4Top =  $('#contact').offset().top - (($(document).height() - $('#contact').offset().top) / 2);;
+	if($('#contact').length>0){  
+		var section4Top =  $('#contact').offset().top - (($(document).height() - $('#contact').offset().top) / 2);;
+	}
 /*
 	$('ul.menu a').removeClass('active');
 	if($(document).scrollTop() >= section1Top && $(document).scrollTop() < section2Top){
